@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <header>
+        <nav class="navbar bg-dark navbar-dark navbar-expand-lg">
+            <a href="index.html" class="navbar-brand"><img src="Images/logo.png" height="60"></a>
+            <button class="navbar-toggler" data-bs-target="#mynav" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                <li class="nav-item dropdown"><a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"  data-bs-target="#dpdn">PRODUCTS</a>
+                   <ul class="dropdown-menu bg-dark" id="dpdn">
+                    <li class="nav-item"><a href="product1.html" class="nav-link">Product 1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Product 2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Product 3</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Product 4</a></li>
+                   </ul>         
+                </li>
+                <li class="nav-item"><a href="contactus.html" class="nav-link">CONTACTUS</a></li>
+                <li class="nav-item"><a href="" class="nav-link">FEEDBACK</a></li>
+                <li class="nav-item"><a href="faqs.html" class="nav-link">FAQS</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+    <!-- End of Navbar -->
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-md-4">
+                <!-- <label class="form-label">Search Here</label> -->
+                <input type="text" class="form-control" id="myinput" placeholder="Search Here"> <br>
+            </div>
+            <!-- <div class="col-md-4">
+                <button  class="btn btn-outline-danger">Search</button>
+            </div> -->
+        </div>
+        <div class="row my-5">
+            <h1 class="h1 text-center">Sports Products</h1>
+            <div class="col-12">
+                <table class="table table-bordered table-hover table-responsive" id="srch">
+                    <tr class="table-info">
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Discounted Price</th>
+                    <th>Product Image</th>
+                    </tr>
+                    <tr class="table-primary">
+                        <td>1</td>
+                        <td>Cricket Bat</td>
+                        <td>100$</td>
+                        <td>90$</td>
+                        <td><img src="Images/cr1.jpg" width="200" height="100"></td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td>2</td>
+                        <td>Cricket Ball</td>
+                        <td>50$</td>
+                        <td>40$</td>
+                        <td><img src="Images/cr2.jpg" width="200" height="100"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Cricket Wicket</td>
+                        <td>200$</td>
+                        <td>150$</td>
+                        <td><img src="Images/cr3.jpg" width="200" height="100"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Cricket Kit</td>
+                        <td>500$</td>
+                        <td>450$</td>
+                        <td><img src="Images/cr4.jpg" width="200" height="100"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Foot Ball</td>
+                        <td>100$</td>
+                        <td>90$</td>
+                        <td><img src="Images/1.jpg" width="200" height="100"></td>
+                    </tr>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+<div class="container-fluid bg-dark text-white">
+    <div class="row">
+        <div class="col-4 mt-5">
+            <ul>
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+                <li><a href="">Link 3</a></li>
+                <li><a href="">Link 4</a></li>  
+            </ul>
+        </div>
+        <div class="col-4 mt-5">
+            <ul>
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+                <li><a href="">Link 3</a></li>
+                <li><a href="">Link 4</a></li>  
+            </ul>
+        </div>
+        <div class="col-4 mt-5">
+            <ul>
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+                <li><a href="">Link 3</a></li>
+                <li><a href="">Link 4</a></li>  
+            </ul>
+        </div>
+    </div>
+    <footer class="footer text-center text-muted">&copy; All Rights Reserved By Aptech 2022</footer>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $("#myinput").on("keyup",function() {
+                var value = $(this).val().toLowerCase();
+                $("#srch td").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+
+                });
+
+
+            });
+
+        });
+
+    </script>
+</body>
+</html>
